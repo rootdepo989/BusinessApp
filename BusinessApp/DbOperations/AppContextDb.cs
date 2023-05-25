@@ -18,7 +18,8 @@ namespace BusinessApp.DbOperations
         public DbSet<Rasim> SalesOfRasim { get; set; }
         public DbSet<Kamil> SalesOfKamil { get; set; }
         public DbSet<Xalid> SalesOfXalid { get; set; }
+        public DbSet<Senuber> SalesOfSenuber { get; set; }
         public DbSet<Credit> Credits { get; set; }
-        //public DbSet<Nisye> Nisyeler { get; set; }
+        
     }
 }

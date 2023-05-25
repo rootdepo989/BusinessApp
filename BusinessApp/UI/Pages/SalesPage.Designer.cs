@@ -32,19 +32,16 @@
             label1 = new System.Windows.Forms.Label();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             buttonGoRasimPage = new System.Windows.Forms.Button();
-            buttonGoMeftunPage = new System.Windows.Forms.Button();
+            buttonGoSenuberPage = new System.Windows.Forms.Button();
             pictureBox2 = new System.Windows.Forms.PictureBox();
             buttonGoXalidPage = new System.Windows.Forms.Button();
             pictureBox3 = new System.Windows.Forms.PictureBox();
-            buttonGoGunayPage = new System.Windows.Forms.Button();
-            pictureBox4 = new System.Windows.Forms.PictureBox();
             buttonGoKamilPage = new System.Windows.Forms.Button();
             pictureBox5 = new System.Windows.Forms.PictureBox();
             button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             SuspendLayout();
             // 
@@ -82,17 +79,18 @@
             buttonGoRasimPage.UseVisualStyleBackColor = false;
             buttonGoRasimPage.Click += buttonGoRasimPage_Click;
             // 
-            // buttonGoMeftunPage
+            // buttonGoSenuberPage
             // 
-            buttonGoMeftunPage.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            buttonGoMeftunPage.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            buttonGoMeftunPage.ForeColor = System.Drawing.Color.White;
-            buttonGoMeftunPage.Location = new System.Drawing.Point(518, 189);
-            buttonGoMeftunPage.Name = "buttonGoMeftunPage";
-            buttonGoMeftunPage.Size = new System.Drawing.Size(100, 27);
-            buttonGoMeftunPage.TabIndex = 4;
-            buttonGoMeftunPage.Text = "Meftun";
-            buttonGoMeftunPage.UseVisualStyleBackColor = false;
+            buttonGoSenuberPage.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            buttonGoSenuberPage.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            buttonGoSenuberPage.ForeColor = System.Drawing.Color.White;
+            buttonGoSenuberPage.Location = new System.Drawing.Point(518, 189);
+            buttonGoSenuberPage.Name = "buttonGoSenuberPage";
+            buttonGoSenuberPage.Size = new System.Drawing.Size(100, 27);
+            buttonGoSenuberPage.TabIndex = 4;
+            buttonGoSenuberPage.Text = "Senuber";
+            buttonGoSenuberPage.UseVisualStyleBackColor = false;
+            buttonGoSenuberPage.Click += buttonGoSenuberPage_Click;
             // 
             // pictureBox2
             // 
@@ -126,28 +124,6 @@
             pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 5;
             pictureBox3.TabStop = false;
-            // 
-            // buttonGoGunayPage
-            // 
-            buttonGoGunayPage.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            buttonGoGunayPage.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            buttonGoGunayPage.ForeColor = System.Drawing.Color.White;
-            buttonGoGunayPage.Location = new System.Drawing.Point(665, 189);
-            buttonGoGunayPage.Name = "buttonGoGunayPage";
-            buttonGoGunayPage.Size = new System.Drawing.Size(100, 27);
-            buttonGoGunayPage.TabIndex = 8;
-            buttonGoGunayPage.Text = "Gunay";
-            buttonGoGunayPage.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = Properties.Resources._3d_user_folder_20516;
-            pictureBox4.Location = new System.Drawing.Point(665, 99);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new System.Drawing.Size(100, 84);
-            pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 7;
-            pictureBox4.TabStop = false;
             // 
             // buttonGoKamilPage
             // 
@@ -193,11 +169,9 @@
             Controls.Add(button1);
             Controls.Add(buttonGoKamilPage);
             Controls.Add(pictureBox5);
-            Controls.Add(buttonGoGunayPage);
-            Controls.Add(pictureBox4);
             Controls.Add(buttonGoXalidPage);
             Controls.Add(pictureBox3);
-            Controls.Add(buttonGoMeftunPage);
+            Controls.Add(buttonGoSenuberPage);
             Controls.Add(pictureBox2);
             Controls.Add(buttonGoRasimPage);
             Controls.Add(pictureBox1);
@@ -210,7 +184,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -221,12 +194,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonGoRasimPage;
-        private System.Windows.Forms.Button buttonGoMeftunPage;
+        private System.Windows.Forms.Button buttonGoSenuberPage;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button buttonGoXalidPage;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button buttonGoGunayPage;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button buttonGoKamilPage;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button button1;
