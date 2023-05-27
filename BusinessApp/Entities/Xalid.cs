@@ -1,10 +1,11 @@
-﻿using System;
+﻿using BusinessApp.Core.Abstracts;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace BusinessApp.Entities
 {
-    public class Xalid
+    public class Xalid : IEntity
     {
         public int Id { get; set; }
         public string ML_10 { get; set; }

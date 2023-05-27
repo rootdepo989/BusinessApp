@@ -55,5 +55,12 @@ namespace BusinessApp.UI.Pages
             SalesOfSenuber salesOfSenuber = new SalesOfSenuber();
             salesOfSenuber.Show();
         }
+
+        private void buttonGoSebinePage_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SalesOfSebine salesOfSebine = new SalesOfSebine();
+            salesOfSebine.Show();
+        }
     }
 }

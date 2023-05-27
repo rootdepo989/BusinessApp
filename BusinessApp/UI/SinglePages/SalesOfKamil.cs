@@ -150,9 +150,9 @@ namespace BusinessApp.UI.SinglePages
             CalcCountOfParfume(kamil);
             double depoPrice = (ml_10 * 2.50) + (ml_20 * 6) + (ml_30 * 10) + (lux * 5) + (delux * 9) + (qr_3azn * 1.80);
             kamil.Maya_Deyeri = depoPrice;
-            double myTotalGain = (ml_10 * 0.50) + (ml_20 * 2) + (ml_30 * 2) + (lux * 1) + (delux * 2) + (qr_3azn * 0.60);
+            double myTotalGain = (ml_10 * 0.50) + (ml_20 * 2) + (ml_30 * 1) + (lux * 1) + (delux * 2) + (qr_3azn * 0.60);
             kamil.Qazancım = myTotalGain;
-            double totalMoney = (ml_10 * 3) + (ml_20 * 8) + (ml_30 * 12) + (lux * 6) + (delux * 11) + (qr_3azn * 2.40);
+            double totalMoney = (ml_10 * 3) + (ml_20 * 8) + (ml_30 * 11) + (lux * 6) + (delux * 11) + (qr_3azn * 2.40);
             kamil.Toplam_Aldıgım = totalMoney;
 
         }

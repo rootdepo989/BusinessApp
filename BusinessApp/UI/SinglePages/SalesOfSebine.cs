@@ -12,20 +12,18 @@ using System.Windows.Forms;
 
 namespace BusinessApp.UI.SinglePages
 {
-    public partial class SalesOfSenuber : Form
+    public partial class SalesOfSebine : Form
     {
         AppContextDb db = new AppContextDb();
         DialogResult alert;
         DateTime date = DateTime.Now;
 
-       
-
-        public SalesOfSenuber()
+        public SalesOfSebine()
         {
             InitializeComponent();
         }
 
-        private void SalesOfSenuber_FormClosing(object sender, FormClosingEventArgs e)
+        private void SalesOfSebine_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
@@ -37,7 +35,7 @@ namespace BusinessApp.UI.SinglePages
             salesPage.Show();
         }
 
-        private void SalesOfSenuber_Load(object sender, EventArgs e)
+        private void SalesOfSebine_Load(object sender, EventArgs e)
         {
             GetAllSales();
         }
@@ -45,7 +43,7 @@ namespace BusinessApp.UI.SinglePages
         // GetAllSellers method...
         private void GetAllSales()
         {
-            dataGridViewOfSenuberPage.DataSource = db.SalesOfSenuber.ToList();
+            dataGridViewOfSebinePage.DataSource = db.SalesOfSebine.ToList();
             ClearAllInputs();
         }
 
@@ -64,12 +62,12 @@ namespace BusinessApp.UI.SinglePages
         // add event...
         private void buttonADD_Click(object sender, EventArgs e)
         {
+            Sebine sebine = new Sebine();
 
-            Senuber senuber = new Senuber();
             try
             {
-                AddEntity(senuber);
-               
+                AddEntity(sebine);
+
             }
             catch (Exception ex)
             {
@@ -77,22 +75,21 @@ namespace BusinessApp.UI.SinglePages
             }
         }
 
-
         // add method..
-        private void AddEntity(Senuber senuber)
+        private void AddEntity(Sebine sebine)
         {
-            
-            senuber.ML_10 = textBox10ML.Text;
-            senuber.ML_20 = textBox20ML.Text;
-            senuber.ML_30 = textBox30ML.Text;
-            senuber.LUX = textBoxLUX.Text;
-            senuber.DELUX = textBoxDELUX.Text;
-            senuber.Qr_3AZN = textBoxQr_3AZN.Text;
-            CalcCountOfParfume(senuber);
-            CalcDepoPriceOfParfumesAndMyGainAndTotalMoney(senuber);
-            senuber.Zaman = date;
-            db.SalesOfSenuber.Add(senuber);
-            DecreaseParfumesFromSellers();  
+
+            sebine.ML_10 = textBox10ML.Text;
+            sebine.ML_20 = textBox20ML.Text;
+            sebine.ML_30 = textBox30ML.Text;
+            sebine.LUX = textBoxLUX.Text;
+            sebine.DELUX = textBoxDELUX.Text;
+            sebine.Qr_3AZN = textBoxQr_3AZN.Text;
+            CalcCountOfParfume(sebine);
+            CalcDepoPriceOfParfumesAndMyGainAndTotalMoney(sebine);
+            sebine.Zaman = date;
+            db.SalesOfSebine.Add(sebine);
+            DecreaseParfumesFromSellers();
             db.SaveChanges();
             GetAllSales();
         }
@@ -100,8 +97,8 @@ namespace BusinessApp.UI.SinglePages
         // decrease parfumes of sellers
         private void DecreaseParfumesFromSellers()
         {
-            Seller seller = db.Sellers.SingleOrDefault(s => s.Satıcının_Adı == "senuber");
-            if (seller.Satıcının_Adı == "senuber")
+            Seller seller = db.Sellers.SingleOrDefault(s => s.Satıcının_Adı == "sebine");
+            if (seller.Satıcının_Adı == "sebine")
             {
                 var result_ml10 = Convert.ToInt32(seller.ML_10) - Convert.ToInt32(textBox10ML.Text);
                 seller.ML_10 = Convert.ToString(result_ml10);
@@ -121,7 +118,7 @@ namespace BusinessApp.UI.SinglePages
 
 
         // calc total count of parfume...
-        private void CalcCountOfParfume(Senuber senuber)
+        private void CalcCountOfParfume(Sebine sebine)
         {
 
             var ml_10 = Convert.ToInt32(textBox10ML.Text);
@@ -131,13 +128,13 @@ namespace BusinessApp.UI.SinglePages
             var delux = Convert.ToInt32(textBoxDELUX.Text);
             var qr_3azn = Convert.ToInt32(textBoxQr_3AZN.Text);
             var totalCount = ml_10 + ml_20 + ml_30 + lux + delux + qr_3azn;
-            senuber.Toplam_Say = Convert.ToString(totalCount);
+            sebine.Toplam_Say = Convert.ToString(totalCount);
 
 
         }
 
         // cal total price of parfume...
-        private void CalcDepoPriceOfParfumesAndMyGainAndTotalMoney(Senuber senuber)
+        private void CalcDepoPriceOfParfumesAndMyGainAndTotalMoney(Sebine sebine)
         {
 
             var ml_10 = Convert.ToInt32(textBox10ML.Text);
@@ -148,13 +145,13 @@ namespace BusinessApp.UI.SinglePages
             var qr_3azn = Convert.ToInt32(textBoxQr_3AZN.Text);
 
 
-            CalcCountOfParfume(senuber);
+            CalcCountOfParfume(sebine);
             double depoPrice = (ml_10 * 2.50) + (ml_20 * 6) + (ml_30 * 10) + (lux * 5) + (delux * 9) + (qr_3azn * 1.80);
-            senuber.Maya_Deyeri = depoPrice;
+            sebine.Maya_Deyeri = depoPrice;
             double myTotalGain = (ml_10 * 0.50) + (ml_20 * 2) + (ml_30 * 2) + (lux * 1) + (delux * 2) + (qr_3azn * 0.60);
-            senuber.Qazancım = myTotalGain;
+            sebine.Qazancım = myTotalGain;
             double totalMoney = (ml_10 * 3) + (ml_20 * 8) + (ml_30 * 12) + (lux * 6) + (delux * 11) + (qr_3azn * 2.40);
-            senuber.Toplam_Aldıgım = totalMoney;
+            sebine.Toplam_Aldıgım = totalMoney;
 
         }
 
@@ -163,7 +160,7 @@ namespace BusinessApp.UI.SinglePages
         {
             try
             {
-                int entityId = Convert.ToInt32(dataGridViewOfSenuberPage.CurrentRow.Cells[0].Value.ToString());
+                int entityId = Convert.ToInt32(dataGridViewOfSebinePage.CurrentRow.Cells[0].Value.ToString());
                 DeleteEntity(entityId);
             }
             catch (Exception ex)
@@ -172,6 +169,7 @@ namespace BusinessApp.UI.SinglePages
             }
         }
 
+
         // delete method...
 
         private void DeleteEntity(int entityId)
@@ -179,13 +177,13 @@ namespace BusinessApp.UI.SinglePages
 
 
 
-            Senuber senuber = db.SalesOfSenuber.SingleOrDefault(c => c.Id == entityId);
+            Sebine sebine = db.SalesOfSebine.SingleOrDefault(c => c.Id == entityId);
 
             alert = MessageBox.Show($"Satışı silmək istədiyindən əminsən?", "Satış silinəcək!",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Error);
             if (alert == DialogResult.Yes)
             {
-                db.SalesOfSenuber.Remove(senuber);
+                db.SalesOfSebine.Remove(sebine);
                 db.SaveChanges();
             }
             GetAllSales();

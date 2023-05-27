@@ -1,11 +1,10 @@
-﻿using BusinessApp.Core.Abstracts;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace BusinessApp.Entities
 {
-    public class Rasim : IEntity
+    public class Sebine
     {
         public int Id { get; set; }
         public string ML_10 { get; set; }
