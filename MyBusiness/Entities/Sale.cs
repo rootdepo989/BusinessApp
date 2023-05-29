@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace MyBusiness.Entities
+{
+    public class Sale 
+    {
+        public int Id { get; set; }
+        public string Satıcının_Adı { get; set; }    
+        public string ML_10 { get; set; }
+        public string ML_20 { get; set; }
+        public string ML_30 { get; set; }
+        public string LUX { get; set; }
+        public string DELUX { get; set; }
+        public string Qr_3AZN { get; set; }
+        public double Maya_Deyeri { get; set; }
+        public double Qazancım { get; set; }
+        public double Toplam_Aldıgım { get; set; }
+        public DateTime Zaman { get; set; }
+    }
+}
