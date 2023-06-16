@@ -4,10 +4,11 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>Public\images\hand_coin_dollar_finance_icon_125506.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Public\" />
+    <Content Include="Public\images\hand_coin_dollar_finance_icon_125506.ico" />
   </ItemGroup>
 
   <ItemGroup>
