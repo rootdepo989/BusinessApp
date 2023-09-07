@@ -10,7 +10,7 @@ namespace MyBusiness.DbOperations
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;Database=MYDB;Trusted_Connection=true");
+            optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;Database=ParfumesDB;Trusted_Connection=true");
         }
 
         public DbSet<Admin> Admins { get; set; }
