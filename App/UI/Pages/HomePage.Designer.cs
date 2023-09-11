@@ -1,6 +1,6 @@
 ﻿namespace App
 {
-    partial class Home
+    partial class HomePage
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Home";
+            SuspendLayout();
+            // 
+            // HomePage
+            // 
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(800, 450);
+            Name = "HomePage";
+            Text = "Home";
+            FormClosing += HomePage_FormClosing;
+            Load += HomePage_Load;
+            ResumeLayout(false);
         }
 
         #endregion
