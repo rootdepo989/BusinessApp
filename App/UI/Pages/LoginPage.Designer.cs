@@ -99,6 +99,7 @@
             buttonLOGIN.Text = "Daxil ol";
             buttonLOGIN.UseVisualStyleBackColor = true;
             buttonLOGIN.Click += buttonLOGIN_Click;
+            buttonLOGIN.MouseHover += buttonLOGIN_MouseHover;
             // 
             // LoginPage
             // 

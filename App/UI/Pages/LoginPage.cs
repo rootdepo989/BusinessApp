@@ -60,5 +60,10 @@ namespace App.UI.Pages
         {
             Application.Exit();
         }
+
+        private void buttonLOGIN_MouseHover(object sender, EventArgs e)
+        {
+            buttonLOGIN.Cursor = Cursors.Hand;
+        }
     }
 }

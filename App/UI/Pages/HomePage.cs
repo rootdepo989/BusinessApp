@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App.UI.Pages;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +29,18 @@ namespace App
         private void HomePage_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pictureBoxGoParumesPage_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxGoParumesPage.Cursor = Cursors.Hand;    
+        }
+
+        private void pictureBoxGoParumesPage_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ParfumesDashboard parfumesDashboard = new ParfumesDashboard();
+            parfumesDashboard.Show();
         }
     }
 }
