@@ -31,12 +31,9 @@ namespace App
             Application.Exit();
         }
 
-        private void pictureBoxGoParumesPage_MouseHover(object sender, EventArgs e)
-        {
-            pictureBoxGoParumesPage.Cursor = Cursors.Hand;    
-        }
 
-        private void pictureBoxGoParumesPage_Click(object sender, EventArgs e)
+
+        private void buttonGoParfumeBusinessPage_Click(object sender, EventArgs e)
         {
             this.Hide();
             ParfumesDashboard parfumesDashboard = new ParfumesDashboard();
