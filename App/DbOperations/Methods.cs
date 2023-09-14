@@ -1,7 +1,6 @@
-﻿using MyBusiness.Core.Abstracts;
-using MyBusiness.Core.Concrets;
-using MyBusiness.Entities;
-using MyBusiness.UI.Pages;
+﻿using App.Core.Concrets;
+using App.DbOperations;
+using App.Entities;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -10,7 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
-namespace MyBusiness.DbOperations
+namespace App.DbOperations
 {
     public class Methods 
     {
@@ -62,6 +61,7 @@ namespace MyBusiness.DbOperations
             entity.DELUX = DELUX;
             entity.Qr_3AZN = Qr3AZN;
             
+
         }
 
         // CALC DEPO PRICE OF PARFUMES AND MYGAIN AND TOTAL MONEY 0F SELLERS....
@@ -101,7 +101,7 @@ namespace MyBusiness.DbOperations
 
         // DECREASE PARFUMES FROM SELLER..
         public static void DecreaseParfumesFromSellers(AppContextDb db, string NAME, string ML10, string ML20,
-            string ML30, string LUX, string DELUX, string Qr3AZN)
+            string ML30, string LUX, string DELUX, string Qr3AZN,DateTime date)
         {
             Seller seller = db.Sellers.SingleOrDefault(x => x.Satıcının_Adı == NAME);
             if (seller.Satıcının_Adı == NAME)
@@ -118,13 +118,14 @@ namespace MyBusiness.DbOperations
                 seller.DELUX = Convert.ToString(result_delux);
                 var result_qr3azn = Convert.ToInt32(seller.Qr_3AZN) - Convert.ToInt32(Qr3AZN);
                 seller.Qr_3AZN = Convert.ToString(result_qr3azn);
+                seller.Zaman = date;
 
             }
         }
 
         // UPDATE SELLER...
         public static void UpdateSeller(int sellerId, AppContextDb db, string NAME, string ML10, string ML20,
-            string ML30, string LUX, string DELUX, string Qr3AZN)
+            string ML30, string LUX, string DELUX, string Qr3AZN,DateTime date)
         {
 
             Seller entity = db.Sellers.SingleOrDefault(s => s.Id == sellerId);
@@ -135,6 +136,7 @@ namespace MyBusiness.DbOperations
             entity.LUX = LUX;
             entity.DELUX = DELUX;
             entity.Qr_3AZN = Qr3AZN;
+            entity.Zaman = date;
             // -------------------------------------------------------------------
             var ml_10 = Convert.ToInt32(ML10);
             var ml_20 = Convert.ToInt32(ML20);
@@ -240,10 +242,11 @@ namespace MyBusiness.DbOperations
             var lux = Convert.ToInt32(LUX);
             var delux = Convert.ToInt32(DELUX);
             var qr_3azn = Convert.ToInt32(Qr3AZN);
+            var date = DateTime.Now;
 
 
             CalcDepoPriceOfParfumesAndMyGainAndTotalMoney2(entity, ML10, ML20, ML30, LUX, DELUX, Qr3AZN);
-            Methods.DecreaseParfumesFromSellers(db, NAME, ML10, ML20, ML30, LUX, DELUX, Qr3AZN);
+            Methods.DecreaseParfumesFromSellers(db, NAME, ML10, ML20, ML30, LUX, DELUX, Qr3AZN,date);
             db.SaveChanges();
 
         }

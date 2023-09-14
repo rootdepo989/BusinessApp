@@ -1,5 +1,5 @@
-﻿using MyBusiness.DbOperations;
-using MyBusiness.Entities;
+﻿using App.DbOperations;
+using App.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

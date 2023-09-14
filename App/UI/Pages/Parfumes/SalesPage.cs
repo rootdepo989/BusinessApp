@@ -1,5 +1,7 @@
-﻿using MyBusiness.DbOperations;
-using MyBusiness.Entities;
+﻿using App;
+using App.DbOperations;
+using App.Entities;
+using App.UI.Pages;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,8 +32,8 @@ namespace MyBusiness.UI.Pages
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            HomePage homePage = new HomePage();
-            homePage.Show();
+            ParfumesDashboard parfumesDashboard = new ParfumesDashboard();
+            parfumesDashboard.Show();
         }
 
         private void SalesPage_Load(object sender, EventArgs e)
@@ -68,7 +70,7 @@ namespace MyBusiness.UI.Pages
             try
             {
                 Methods.AddSale(sale, NAME, ML10, ML20, ML30, LUX, DELUX, Qr3AZN, date);
-                Methods.DecreaseParfumesFromSellers(db, NAME, ML10, ML20, ML30, LUX, DELUX, Qr3AZN);
+                Methods.DecreaseParfumesFromSellers(db, NAME, ML10, ML20, ML30, LUX, DELUX, Qr3AZN, date);
                 db.Sales.Add(sale);
                 db.SaveChanges();
                 ClearAllInputs();

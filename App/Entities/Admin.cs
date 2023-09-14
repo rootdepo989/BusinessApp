@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyBusiness.Entities
+namespace App.Entities
 {
     public class Admin
     {

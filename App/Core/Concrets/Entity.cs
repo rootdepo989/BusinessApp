@@ -1,9 +1,9 @@
-﻿using MyBusiness.Core.Abstracts;
+﻿using App.Core.Abstracts;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyBusiness.Core.Concrets
+namespace App.Core.Concrets
 {
     public class Entity 
     {

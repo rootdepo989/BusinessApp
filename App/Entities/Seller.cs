@@ -1,10 +1,10 @@
-﻿using MyBusiness.Core.Abstracts;
-using MyBusiness.Core.Concrets;
+﻿using App.Entities;
+using App.Core.Concrets;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyBusiness.Entities
+namespace App.Entities
 {
     public class Seller : Entity
     { 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyBusiness.Core.Abstracts
+namespace App.Core.Abstracts
 {
     public interface IEntity
     {

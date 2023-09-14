@@ -21,6 +21,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="UI\Pages\Parfumes\SalesPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Pages\Parfumes\SellersPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

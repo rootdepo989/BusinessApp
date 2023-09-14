@@ -34,6 +34,7 @@
             pictureBox2 = new System.Windows.Forms.PictureBox();
             buttonGoSellersPage = new System.Windows.Forms.Button();
             pictureBox3 = new System.Windows.Forms.PictureBox();
+            buttonGoHomePage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -61,6 +62,7 @@
             buttonGoSalesPage.TabIndex = 8;
             buttonGoSalesPage.Text = "Satışlar";
             buttonGoSalesPage.UseVisualStyleBackColor = false;
+            buttonGoSalesPage.Click += buttonGoSalesPage_Click;
             buttonGoSalesPage.MouseHover += buttonGoSalesPage_MouseHover;
             // 
             // pictureBox2
@@ -96,11 +98,22 @@
             pictureBox3.TabIndex = 5;
             pictureBox3.TabStop = false;
             // 
+            // buttonGoHomePage
+            // 
+            buttonGoHomePage.Location = new System.Drawing.Point(0, 0);
+            buttonGoHomePage.Name = "buttonGoHomePage";
+            buttonGoHomePage.Size = new System.Drawing.Size(75, 23);
+            buttonGoHomePage.TabIndex = 9;
+            buttonGoHomePage.Text = "<<<< Geri";
+            buttonGoHomePage.UseVisualStyleBackColor = true;
+            buttonGoHomePage.Click += buttonGoHomePage_Click;
+            // 
             // ParfumesDashboard
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 450);
+            Controls.Add(buttonGoHomePage);
             Controls.Add(buttonGoSalesPage);
             Controls.Add(pictureBox2);
             Controls.Add(buttonGoSellersPage);
@@ -124,5 +137,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button buttonGoSellersPage;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button buttonGoHomePage;
     }
 }

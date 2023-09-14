@@ -1,10 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
-using MyBusiness.Entities;
+﻿using App.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyBusiness.DbOperations
+namespace App.DbOperations
 {
     public class AppContextDb : DbContext
     {
@@ -14,6 +14,8 @@ namespace MyBusiness.DbOperations
         }
 
         public DbSet<Admin> Admins { get; set; }
+        public DbSet<Seller> Sellers { get; set; }
+        public DbSet<Sale> Sales { get; set; }
 
     }
 }
