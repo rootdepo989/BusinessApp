@@ -1,4 +1,5 @@
 ﻿using App.UI.Pages;
+using App.UI.Pages.Internet;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,6 +39,23 @@ namespace App
             this.Hide();
             ParfumesDashboard parfumesDashboard = new ParfumesDashboard();
             parfumesDashboard.Show();
+        }
+
+        private void buttonGoWebBusinessPage_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            InternetDashboard internetDashboard = new InternetDashboard();
+            internetDashboard.Show();
+        }
+
+        private void buttonGoParfumeBusinessPage_MouseHover(object sender, EventArgs e)
+        {
+            buttonGoParfumeBusinessPage.Cursor = Cursors.Hand;
+        }
+
+        private void buttonGoWebBusinessPage_MouseHover(object sender, EventArgs e)
+        {
+            buttonGoWebBusinessPage.Cursor = Cursors.Hand;
         }
     }
 }

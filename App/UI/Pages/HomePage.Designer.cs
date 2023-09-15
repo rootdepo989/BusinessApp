@@ -32,6 +32,7 @@
             label2 = new System.Windows.Forms.Label();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             buttonGoParfumeBusinessPage = new System.Windows.Forms.Button();
+            buttonGoWebBusinessPage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -70,12 +71,29 @@
             buttonGoParfumeBusinessPage.Text = "ƏTİR TİCARƏTİM";
             buttonGoParfumeBusinessPage.UseVisualStyleBackColor = false;
             buttonGoParfumeBusinessPage.Click += buttonGoParfumeBusinessPage_Click;
+            buttonGoParfumeBusinessPage.MouseHover += buttonGoParfumeBusinessPage_MouseHover;
+            // 
+            // buttonGoWebBusinessPage
+            // 
+            buttonGoWebBusinessPage.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            buttonGoWebBusinessPage.BackgroundImage = (System.Drawing.Image)resources.GetObject("buttonGoWebBusinessPage.BackgroundImage");
+            buttonGoWebBusinessPage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            buttonGoWebBusinessPage.ForeColor = System.Drawing.Color.Lime;
+            buttonGoWebBusinessPage.Location = new System.Drawing.Point(30, 224);
+            buttonGoWebBusinessPage.Name = "buttonGoWebBusinessPage";
+            buttonGoWebBusinessPage.Size = new System.Drawing.Size(168, 46);
+            buttonGoWebBusinessPage.TabIndex = 8;
+            buttonGoWebBusinessPage.Text = "İNTERNET İŞLƏRİM";
+            buttonGoWebBusinessPage.UseVisualStyleBackColor = false;
+            buttonGoWebBusinessPage.Click += buttonGoWebBusinessPage_Click;
+            buttonGoWebBusinessPage.MouseHover += buttonGoWebBusinessPage_MouseHover;
             // 
             // HomePage
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 450);
+            Controls.Add(buttonGoWebBusinessPage);
             Controls.Add(buttonGoParfumeBusinessPage);
             Controls.Add(pictureBox1);
             Controls.Add(label2);
@@ -95,5 +113,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonGoParfumeBusinessPage;
+        private System.Windows.Forms.Button buttonGoWebBusinessPage;
     }
 }
