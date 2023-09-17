@@ -16,6 +16,7 @@ namespace App.DbOperations
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Seller> Sellers { get; set; }
         public DbSet<Sale> Sales { get; set; }
+        public DbSet<Announcement> Announcements { get; set; }  
 
     }
 }

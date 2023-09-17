@@ -49,5 +49,40 @@ namespace App.UI.Pages.Internet
             HomePage homePage = new HomePage();
             homePage.Show();
         }
+
+        private void buttonGoPaylasimdizayncisiPage_MouseHover(object sender, EventArgs e)
+        {
+            buttonGoPaylasimdizayncisiPage.BackColor = Color.Red;
+            buttonGoPaylasimdizayncisiPage.Cursor = Cursors.Hand;
+        }
+
+        private void buttonGoPaylasimdizayncisiPage_MouseLeave(object sender, EventArgs e)
+        {
+            buttonGoPaylasimdizayncisiPage.BackColor = Color.Black;
+        }
+
+        private void buttonGoPaylasimdizayncisiPage_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PaylasimdizayncisiPage paylasimdizayncisiPage = new PaylasimdizayncisiPage();
+            paylasimdizayncisiPage.Show();
+        }
+
+        private void buttonGoEtirDeluxPage_MouseHover(object sender, EventArgs e)
+        {
+            buttonGoEtirDeluxPage.BackColor = Color.Red;
+        }
+
+        private void buttonGoEtirDeluxPage_MouseLeave(object sender, EventArgs e)
+        {
+            buttonGoEtirDeluxPage.BackColor = Color.Black;
+        }
+
+        private void buttonGoEtirDeluxPage_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            EtirDeluxPage etirDeluxPage = new EtirDeluxPage();
+            etirDeluxPage.Show();
+        }
     }
 }

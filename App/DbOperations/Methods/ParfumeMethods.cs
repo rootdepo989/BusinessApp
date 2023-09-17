@@ -1,5 +1,4 @@
 ﻿using App.Core.Concrets;
-using App.DbOperations;
 using App.Entities;
 using System;
 using System.Collections.Generic;
@@ -9,9 +8,9 @@ using System.Text;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
-namespace App.DbOperations
+namespace App.DbOperations.Methods
 {
-    public class Methods 
+    public class ParfumeMethods
     {
         //************************** SELLER METHODS STARTED *******************************
 
@@ -22,11 +21,11 @@ namespace App.DbOperations
         }
 
         // ADD SELLER....
-        public static void AddSeller(Seller entity,string NAME,string ML10,string ML20,
-            string ML30,string LUX,string DELUX,string Qr3AZN, DateTime date)
+        public static void AddSeller(Seller entity, string NAME, string ML10, string ML20,
+            string ML30, string LUX, string DELUX, string Qr3AZN, DateTime date)
 
         {
-            
+
             entity.Satıcının_Adı = NAME;
             entity.ML_10 = ML10;
             entity.ML_20 = ML20;
@@ -36,8 +35,8 @@ namespace App.DbOperations
             entity.Qr_3AZN = Qr3AZN;
             CalcCountOfParfumes(entity, ML10, ML20, ML30, LUX, DELUX, Qr3AZN);
             CalcDepoPriceOfParfumesAndMyGainAndTotalMoney(entity, ML10, ML20, ML30, LUX, DELUX, Qr3AZN);
-            entity.Zaman = date;       
-            
+            entity.Zaman = date;
+
         }
 
 
@@ -47,7 +46,7 @@ namespace App.DbOperations
         {
             var ml10 = Convert.ToInt32(ML10);
             var ml20 = Convert.ToInt32(ML20);
-            var ml30 = Convert.ToInt32( ML30);
+            var ml30 = Convert.ToInt32(ML30);
             var lux = Convert.ToInt32(LUX);
             var delux = Convert.ToInt32(DELUX);
             var qr3azn = Convert.ToInt32(Qr3AZN);
@@ -60,7 +59,7 @@ namespace App.DbOperations
             entity.LUX = LUX;
             entity.DELUX = DELUX;
             entity.Qr_3AZN = Qr3AZN;
-            
+
 
         }
 
@@ -78,22 +77,22 @@ namespace App.DbOperations
 
 
 
-           if(entity.Satıcının_Adı == "kamil")
+            if (entity.Satıcının_Adı == "kamil")
             {
-                double depoPrice = (ml_10 * 2.50) + (ml_20 * 6) + (ml_30 * 10) + (lux * 5) + (delux * 9) + (qr_3azn * 1.80);
+                double depoPrice = ml_10 * 2.50 + ml_20 * 6 + ml_30 * 10 + lux * 5 + delux * 9 + qr_3azn * 1.80;
                 entity.Maya_Deyeri = depoPrice;
-                double myTotalGain = (ml_10 * 0.50) + (ml_20 * 2) + (ml_30 * 1) + (lux * 1) + (delux * 2) + (qr_3azn * 0.60);
+                double myTotalGain = ml_10 * 0.50 + ml_20 * 2 + ml_30 * 1 + lux * 1 + delux * 2 + qr_3azn * 0.60;
                 entity.Qazancım = myTotalGain;
-                double totalMoney = (ml_10 * 3) + (ml_20 * 8) + (ml_30 * 11) + (lux * 6) + (delux * 11) + (qr_3azn * 2.40);
+                double totalMoney = ml_10 * 3 + ml_20 * 8 + ml_30 * 11 + lux * 6 + delux * 11 + qr_3azn * 2.40;
                 entity.Toplam_Alacagim = totalMoney;
             }
             else
             {
-                double depoPrice = (ml_10 * 2.50) + (ml_20 * 6) + (ml_30 * 10) + (lux * 5) + (delux * 9) + (qr_3azn * 1.80);
+                double depoPrice = ml_10 * 2.50 + ml_20 * 6 + ml_30 * 10 + lux * 5 + delux * 9 + qr_3azn * 1.80;
                 entity.Maya_Deyeri = depoPrice;
-                double myTotalGain = (ml_10 * 0.50) + (ml_20 * 2) + (ml_30 * 1) + (lux * 1) + (delux * 2) + (qr_3azn * 0.60);
+                double myTotalGain = ml_10 * 0.50 + ml_20 * 2 + ml_30 * 1 + lux * 1 + delux * 2 + qr_3azn * 0.60;
                 entity.Qazancım = myTotalGain;
-                double totalMoney = (ml_10 * 3) + (ml_20 * 8) + (ml_30 * 12) + (lux * 6) + (delux * 11) + (qr_3azn * 2.40);
+                double totalMoney = ml_10 * 3 + ml_20 * 8 + ml_30 * 12 + lux * 6 + delux * 11 + qr_3azn * 2.40;
                 entity.Toplam_Alacagim = totalMoney;
             }
 
@@ -101,7 +100,7 @@ namespace App.DbOperations
 
         // DECREASE PARFUMES FROM SELLER..
         public static void DecreaseParfumesFromSellers(AppContextDb db, string NAME, string ML10, string ML20,
-            string ML30, string LUX, string DELUX, string Qr3AZN,DateTime date)
+            string ML30, string LUX, string DELUX, string Qr3AZN, DateTime date)
         {
             Seller seller = db.Sellers.SingleOrDefault(x => x.Satıcının_Adı == NAME);
             if (seller.Satıcının_Adı == NAME)
@@ -125,7 +124,7 @@ namespace App.DbOperations
 
         // UPDATE SELLER...
         public static void UpdateSeller(int sellerId, AppContextDb db, string NAME, string ML10, string ML20,
-            string ML30, string LUX, string DELUX, string Qr3AZN,DateTime date)
+            string ML30, string LUX, string DELUX, string Qr3AZN, DateTime date)
         {
 
             Seller entity = db.Sellers.SingleOrDefault(s => s.Id == sellerId);
@@ -148,9 +147,9 @@ namespace App.DbOperations
 
             CalcCountOfParfumes(entity, ML10, ML20, ML30, LUX, DELUX, Qr3AZN);
             CalcDepoPriceOfParfumesAndMyGainAndTotalMoney(entity, ML10, ML20, ML30, LUX, DELUX, Qr3AZN);
-            
+
             db.SaveChanges();
-            
+
         }
         //************************** SALE METHODS STARTED *******************************
 
@@ -203,20 +202,20 @@ namespace App.DbOperations
 
             if (entity.Satıcının_Adı == "kamil")
             {
-                double depoPrice = (ml_10 * 2.50) + (ml_20 * 6) + (ml_30 * 10) + (lux * 5) + (delux * 9) + (qr_3azn * 1.80);
+                double depoPrice = ml_10 * 2.50 + ml_20 * 6 + ml_30 * 10 + lux * 5 + delux * 9 + qr_3azn * 1.80;
                 entity.Maya_Deyeri = depoPrice;
-                double myTotalGain = (ml_10 * 0.50) + (ml_20 * 2) + (ml_30 * 1) + (lux * 1) + (delux * 2) + (qr_3azn * 0.60);
+                double myTotalGain = ml_10 * 0.50 + ml_20 * 2 + ml_30 * 1 + lux * 1 + delux * 2 + qr_3azn * 0.60;
                 entity.Qazancım = myTotalGain;
-                double totalMoney = (ml_10 * 3) + (ml_20 * 8) + (ml_30 * 11) + (lux * 6) + (delux * 11) + (qr_3azn * 2.40);
+                double totalMoney = ml_10 * 3 + ml_20 * 8 + ml_30 * 11 + lux * 6 + delux * 11 + qr_3azn * 2.40;
                 entity.Toplam_Aldıgım = totalMoney;
             }
             else
             {
-                double depoPrice = (ml_10 * 2.50) + (ml_20 * 6) + (ml_30 * 10) + (lux * 5) + (delux * 9) + (qr_3azn * 1.80);
+                double depoPrice = ml_10 * 2.50 + ml_20 * 6 + ml_30 * 10 + lux * 5 + delux * 9 + qr_3azn * 1.80;
                 entity.Maya_Deyeri = depoPrice;
-                double myTotalGain = (ml_10 * 0.50) + (ml_20 * 2) + (ml_30 * 1) + (lux * 1) + (delux * 2) + (qr_3azn * 0.60);
+                double myTotalGain = ml_10 * 0.50 + ml_20 * 2 + ml_30 * 1 + lux * 1 + delux * 2 + qr_3azn * 0.60;
                 entity.Qazancım = myTotalGain;
-                double totalMoney = (ml_10 * 3) + (ml_20 * 8) + (ml_30 * 12) + (lux * 6) + (delux * 11) + (qr_3azn * 2.40);
+                double totalMoney = ml_10 * 3 + ml_20 * 8 + ml_30 * 12 + lux * 6 + delux * 11 + qr_3azn * 2.40;
                 entity.Toplam_Aldıgım = totalMoney;
             }
 
@@ -246,7 +245,7 @@ namespace App.DbOperations
 
 
             CalcDepoPriceOfParfumesAndMyGainAndTotalMoney2(entity, ML10, ML20, ML30, LUX, DELUX, Qr3AZN);
-            Methods.DecreaseParfumesFromSellers(db, NAME, ML10, ML20, ML30, LUX, DELUX, Qr3AZN,date);
+            DecreaseParfumesFromSellers(db, NAME, ML10, ML20, ML30, LUX, DELUX, Qr3AZN, date);
             db.SaveChanges();
 
         }

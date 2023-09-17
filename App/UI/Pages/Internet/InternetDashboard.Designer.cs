@@ -34,9 +34,15 @@
             pictureBox3 = new System.Windows.Forms.PictureBox();
             buttonGoElanAtlasiPage = new System.Windows.Forms.Button();
             button1 = new System.Windows.Forms.Button();
+            pictureBox2 = new System.Windows.Forms.PictureBox();
+            buttonGoPaylasimdizayncisiPage = new System.Windows.Forms.Button();
+            pictureBox4 = new System.Windows.Forms.PictureBox();
+            buttonGoEtirDeluxPage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxInInternetDashPage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -80,7 +86,7 @@
             buttonGoElanAtlasiPage.Name = "buttonGoElanAtlasiPage";
             buttonGoElanAtlasiPage.Size = new System.Drawing.Size(125, 32);
             buttonGoElanAtlasiPage.TabIndex = 3;
-            buttonGoElanAtlasiPage.Text = "Elan Atlası Səhifəsi";
+            buttonGoElanAtlasiPage.Text = "Səhifəyə Get";
             buttonGoElanAtlasiPage.UseVisualStyleBackColor = false;
             buttonGoElanAtlasiPage.Click += buttonGoElanAtlasiPage_Click;
             buttonGoElanAtlasiPage.MouseLeave += buttonGoElanAtlasiPage_MouseLeave;
@@ -96,11 +102,65 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (System.Drawing.Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new System.Drawing.Point(358, 223);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new System.Drawing.Size(125, 117);
+            pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 5;
+            pictureBox2.TabStop = false;
+            // 
+            // buttonGoPaylasimdizayncisiPage
+            // 
+            buttonGoPaylasimdizayncisiPage.BackColor = System.Drawing.Color.Black;
+            buttonGoPaylasimdizayncisiPage.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            buttonGoPaylasimdizayncisiPage.ForeColor = System.Drawing.Color.White;
+            buttonGoPaylasimdizayncisiPage.Location = new System.Drawing.Point(358, 346);
+            buttonGoPaylasimdizayncisiPage.Name = "buttonGoPaylasimdizayncisiPage";
+            buttonGoPaylasimdizayncisiPage.Size = new System.Drawing.Size(125, 32);
+            buttonGoPaylasimdizayncisiPage.TabIndex = 6;
+            buttonGoPaylasimdizayncisiPage.Text = "Səhifəyə Get";
+            buttonGoPaylasimdizayncisiPage.UseVisualStyleBackColor = false;
+            buttonGoPaylasimdizayncisiPage.Click += buttonGoPaylasimdizayncisiPage_Click;
+            buttonGoPaylasimdizayncisiPage.MouseLeave += buttonGoPaylasimdizayncisiPage_MouseLeave;
+            buttonGoPaylasimdizayncisiPage.MouseHover += buttonGoPaylasimdizayncisiPage_MouseHover;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = (System.Drawing.Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new System.Drawing.Point(595, 23);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new System.Drawing.Size(125, 117);
+            pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 7;
+            pictureBox4.TabStop = false;
+            // 
+            // buttonGoEtirDeluxPage
+            // 
+            buttonGoEtirDeluxPage.BackColor = System.Drawing.Color.Black;
+            buttonGoEtirDeluxPage.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            buttonGoEtirDeluxPage.ForeColor = System.Drawing.Color.White;
+            buttonGoEtirDeluxPage.Location = new System.Drawing.Point(595, 146);
+            buttonGoEtirDeluxPage.Name = "buttonGoEtirDeluxPage";
+            buttonGoEtirDeluxPage.Size = new System.Drawing.Size(125, 32);
+            buttonGoEtirDeluxPage.TabIndex = 8;
+            buttonGoEtirDeluxPage.Text = "Səhifəyə Get";
+            buttonGoEtirDeluxPage.UseVisualStyleBackColor = false;
+            buttonGoEtirDeluxPage.Click += buttonGoEtirDeluxPage_Click;
+            buttonGoEtirDeluxPage.MouseLeave += buttonGoEtirDeluxPage_MouseLeave;
+            buttonGoEtirDeluxPage.MouseHover += buttonGoEtirDeluxPage_MouseHover;
+            // 
             // InternetDashboard
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 450);
+            Controls.Add(buttonGoEtirDeluxPage);
+            Controls.Add(pictureBox4);
+            Controls.Add(buttonGoPaylasimdizayncisiPage);
+            Controls.Add(pictureBox2);
             Controls.Add(button1);
             Controls.Add(buttonGoElanAtlasiPage);
             Controls.Add(pictureBox3);
@@ -114,6 +174,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxInInternetDashPage).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
         }
 
@@ -124,5 +186,9 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button buttonGoElanAtlasiPage;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button buttonGoPaylasimdizayncisiPage;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button buttonGoEtirDeluxPage;
     }
 }

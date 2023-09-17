@@ -1,5 +1,6 @@
 ﻿using App;
 using App.DbOperations;
+using App.DbOperations.Methods;
 using App.Entities;
 using App.UI.Pages;
 using System;
@@ -40,7 +41,7 @@ namespace MyBusiness.UI.Pages
 
         private void SallersPage_Load(object sender, EventArgs e)
         {
-            Methods.GetAllSellers(dataGridViewOfSellersPage, db);
+            ParfumeMethods.GetAllSellers(dataGridViewOfSellersPage, db);
         }
 
         // ClearAllInputs method...
@@ -72,11 +73,11 @@ namespace MyBusiness.UI.Pages
 
             try
             {
-                Methods.AddSeller(seller, NAME, ML10, ML20, ML30, LUX, DELUX, Qr3AZN, date);
+                ParfumeMethods.AddSeller(seller, NAME, ML10, ML20, ML30, LUX, DELUX, Qr3AZN, date);
                 db.Sellers.Add(seller);
                 db.SaveChanges();
                 ClearAllInputs();
-                Methods.GetAllSellers(dataGridViewOfSellersPage, db);
+                ParfumeMethods.GetAllSellers(dataGridViewOfSellersPage, db);
             }
             catch (Exception ex)
             {
@@ -101,8 +102,8 @@ namespace MyBusiness.UI.Pages
             try
             {
                 int sellerId = Convert.ToInt32(dataGridViewOfSellersPage.CurrentRow.Cells[0].Value.ToString());
-                Methods.UpdateSeller(sellerId, db, NAME, ML10, ML20, ML30, LUX, DELUX, Qr3AZN, date);
-                Methods.GetAllSellers(dataGridViewOfSellersPage, db);
+                ParfumeMethods.UpdateSeller(sellerId, db, NAME, ML10, ML20, ML30, LUX, DELUX, Qr3AZN, date);
+                ParfumeMethods.GetAllSellers(dataGridViewOfSellersPage, db);
                 ClearAllInputs();
             }
             catch (Exception ex)
@@ -170,7 +171,7 @@ namespace MyBusiness.UI.Pages
                 db.Sellers.Remove(seller);
                 db.SaveChanges();
             }
-            Methods.GetAllSellers(dataGridViewOfSellersPage, db);
+            ParfumeMethods.GetAllSellers(dataGridViewOfSellersPage, db);
         }
     }
 }

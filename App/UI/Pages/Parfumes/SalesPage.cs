@@ -1,5 +1,6 @@
 ﻿using App;
 using App.DbOperations;
+using App.DbOperations.Methods;
 using App.Entities;
 using App.UI.Pages;
 using System;
@@ -38,7 +39,7 @@ namespace MyBusiness.UI.Pages
 
         private void SalesPage_Load(object sender, EventArgs e)
         {
-            Methods.GetAllSales(dataGridViewOfSalesPage, db);
+            ParfumeMethods.GetAllSales(dataGridViewOfSalesPage, db);
         }
 
         // ClearAllInputs method...
@@ -69,12 +70,12 @@ namespace MyBusiness.UI.Pages
 
             try
             {
-                Methods.AddSale(sale, NAME, ML10, ML20, ML30, LUX, DELUX, Qr3AZN, date);
-                Methods.DecreaseParfumesFromSellers(db, NAME, ML10, ML20, ML30, LUX, DELUX, Qr3AZN, date);
+                ParfumeMethods.AddSale(sale, NAME, ML10, ML20, ML30, LUX, DELUX, Qr3AZN, date);
+                ParfumeMethods.DecreaseParfumesFromSellers(db, NAME, ML10, ML20, ML30, LUX, DELUX, Qr3AZN, date);
                 db.Sales.Add(sale);
                 db.SaveChanges();
                 ClearAllInputs();
-                Methods.GetAllSales(dataGridViewOfSalesPage, db);
+                ParfumeMethods.GetAllSales(dataGridViewOfSalesPage, db);
             }
             catch (Exception ex)
             {
@@ -97,8 +98,8 @@ namespace MyBusiness.UI.Pages
             try
             {
                 int saleId = Convert.ToInt32(dataGridViewOfSalesPage.CurrentRow.Cells[0].Value.ToString());
-                Methods.UpdateSale(saleId, db, NAME, ML10, ML20, ML30, LUX, DELUX, Qr3AZN);
-                Methods.GetAllSales(dataGridViewOfSalesPage, db);
+                ParfumeMethods.UpdateSale(saleId, db, NAME, ML10, ML20, ML30, LUX, DELUX, Qr3AZN);
+                ParfumeMethods.GetAllSales(dataGridViewOfSalesPage, db);
                 ClearAllInputs();
             }
             catch (Exception ex)
@@ -165,7 +166,7 @@ namespace MyBusiness.UI.Pages
                 db.Sales.Remove(sale);
                 db.SaveChanges();
             }
-            Methods.GetAllSales(dataGridViewOfSalesPage, db);
+            ParfumeMethods.GetAllSales(dataGridViewOfSalesPage, db);
         }
 
 
