@@ -86,13 +86,11 @@ namespace App.UI.Pages.Internet
             string NAME = textBoxNAME.Text;
             string CATEGORY = textBoxCategory.Text;
             string PAYED = Convert.ToString(textBoxTotalPayed.Text);
-            DateTime TIMESTART = Convert.ToDateTime(textBoxTimeStarted.Text);
-            DateTime TIMEFINISHED = Convert.ToDateTime(textBoxTimeFinished.Text);
 
             try
             {
                 int announcementId = Convert.ToInt32(dataGridViewOfAnnouncementPage.CurrentRow.Cells[0].Value.ToString());
-                AnnouncementMethods.UpdateAnnoncement(announcementId, db, NAME, CATEGORY, PAYED, TIMESTART, TIMEFINISHED);
+                AnnouncementMethods.UpdateAnnoncement(announcementId, db, NAME, CATEGORY, PAYED);
                 AnnouncementMethods.GetAllAnnouncements(dataGridViewOfAnnouncementPage, db);
                 ClearAllInputs();
             }
@@ -106,15 +104,15 @@ namespace App.UI.Pages.Internet
         {
             // Select contact from inside from table rows...
 
-            Announcement announcement = new Announcement();
+
 
             try
             {
                 textBoxNAME.Text = dataGridViewOfAnnouncementPage.CurrentRow.Cells[1].Value.ToString();
                 textBoxCategory.Text = dataGridViewOfAnnouncementPage.CurrentRow.Cells[2].Value.ToString();
-                announcement.Ödənilən_Məbləğ = Convert.ToString(dataGridViewOfAnnouncementPage.CurrentRow.Cells[3].Value.ToString());
-                announcement.Başlama_Müddəti = Convert.ToDateTime(dataGridViewOfAnnouncementPage.CurrentRow.Cells[4].Value.ToString());
-                announcement.Bitmə_Müddəti = Convert.ToDateTime(dataGridViewOfAnnouncementPage.CurrentRow.Cells[5].Value.ToString());
+                textBoxTotalPayed.Text = Convert.ToString(dataGridViewOfAnnouncementPage.CurrentRow.Cells[3].Value.ToString());
+                textBoxTimeStarted.Text = dataGridViewOfAnnouncementPage.CurrentRow.Cells[4].Value.ToString();
+                textBoxTimeFinished.Text = dataGridViewOfAnnouncementPage.CurrentRow.Cells[5].Value.ToString();
 
 
             }

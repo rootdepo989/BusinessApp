@@ -84,5 +84,12 @@ namespace App.UI.Pages.Internet
             EtirDeluxPage etirDeluxPage = new EtirDeluxPage();
             etirDeluxPage.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UcuzIzleyiciAlPage ucuzIzleyiciAlPage = new UcuzIzleyiciAlPage();
+            ucuzIzleyiciAlPage.Show();
+        }
     }
 }
