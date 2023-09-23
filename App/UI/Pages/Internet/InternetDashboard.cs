@@ -91,5 +91,12 @@ namespace App.UI.Pages.Internet
             UcuzIzleyiciAlPage ucuzIzleyiciAlPage = new UcuzIzleyiciAlPage();
             ucuzIzleyiciAlPage.Show();
         }
+
+        private void buttonGoTrendhotwalksPage_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TrendHotWalksPage trendHotWalksPage = new TrendHotWalksPage();
+            trendHotWalksPage.Show();
+        }
     }
 }

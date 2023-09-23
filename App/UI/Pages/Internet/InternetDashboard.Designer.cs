@@ -40,12 +40,15 @@
             buttonGoEtirDeluxPage = new System.Windows.Forms.Button();
             pictureBox5 = new System.Windows.Forms.PictureBox();
             button2 = new System.Windows.Forms.Button();
+            pictureBox6 = new System.Windows.Forms.PictureBox();
+            buttonGoTrendhotwalksPage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxInInternetDashPage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -178,11 +181,36 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = (System.Drawing.Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new System.Drawing.Point(516, 171);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new System.Drawing.Size(84, 74);
+            pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            pictureBox6.TabIndex = 11;
+            pictureBox6.TabStop = false;
+            // 
+            // buttonGoTrendhotwalksPage
+            // 
+            buttonGoTrendhotwalksPage.BackColor = System.Drawing.Color.Black;
+            buttonGoTrendhotwalksPage.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            buttonGoTrendhotwalksPage.ForeColor = System.Drawing.Color.White;
+            buttonGoTrendhotwalksPage.Location = new System.Drawing.Point(516, 251);
+            buttonGoTrendhotwalksPage.Name = "buttonGoTrendhotwalksPage";
+            buttonGoTrendhotwalksPage.Size = new System.Drawing.Size(84, 32);
+            buttonGoTrendhotwalksPage.TabIndex = 12;
+            buttonGoTrendhotwalksPage.Text = "Səhifəyə Get";
+            buttonGoTrendhotwalksPage.UseVisualStyleBackColor = false;
+            buttonGoTrendhotwalksPage.Click += buttonGoTrendhotwalksPage_Click;
+            // 
             // InternetDashboard
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 450);
+            Controls.Add(buttonGoTrendhotwalksPage);
+            Controls.Add(pictureBox6);
             Controls.Add(button2);
             Controls.Add(pictureBox5);
             Controls.Add(buttonGoEtirDeluxPage);
@@ -205,6 +233,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ResumeLayout(false);
         }
 
@@ -221,5 +250,7 @@
         private System.Windows.Forms.Button buttonGoEtirDeluxPage;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Button buttonGoTrendhotwalksPage;
     }
 }
