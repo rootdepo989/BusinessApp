@@ -65,5 +65,26 @@ namespace App.UI.Pages
         {
             buttonLOGIN.Cursor = Cursors.Hand;
         }
+
+        private void textBoxADMİNNAME_MouseDown(object sender, MouseEventArgs e)
+        {
+            textBoxADMİNNAME.Text = "";
+        }
+
+        private void textBoxADMİNNAME_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginPage_Load(object sender, EventArgs e)
+        {
+            textBoxADMİNNAME.Text = "Adınızı girin...";
+            textBoxADMİNPASSWORD.Text = "Şifrənizi daxil edin";
+        }
+
+        private void textBoxADMİNPASSWORD_MouseDown(object sender, MouseEventArgs e)
+        {
+            textBoxADMİNPASSWORD.Text = "";
+        }
     }
 }

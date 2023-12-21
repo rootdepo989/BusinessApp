@@ -29,16 +29,12 @@ namespace App.UI.Pages
 
         private void buttonGoSellersPage_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            SellersPage sallersPage = new SellersPage();
-            sallersPage.Show();
+
         }
 
         private void buttonGoSalesPage_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            SalesPage salesPage = new SalesPage();
-            salesPage.Show();
+
         }
 
         private void buttonGoHomePage_Click(object sender, EventArgs e)
@@ -46,6 +42,40 @@ namespace App.UI.Pages
             this.Hide();
             HomePage homePage = new HomePage();
             homePage.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SellersPage sallersPage = new SellersPage();
+            sallersPage.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SalesPage salesPage = new SalesPage();
+            salesPage.Show();
+        }
+
+        private void pictureBox3_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox3.Cursor = Cursors.Hand;
+        }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox2.Cursor = Cursors.Hand;
+        }
+
+        private void pictureBox4_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox4.Cursor = Cursors.Hand;
+        }
+
+        private void buttonGoHomePage_MouseHover(object sender, EventArgs e)
+        {
+            buttonGoHomePage.Cursor = Cursors.Hand;
         }
     }
 }

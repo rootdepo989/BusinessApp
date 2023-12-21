@@ -1,5 +1,5 @@
 ﻿using App.UI.Pages;
-using App.UI.Pages.Internet;
+using App.UI.Pages.Toothpaste;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,9 +43,7 @@ namespace App
 
         private void buttonGoWebBusinessPage_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            InternetDashboard internetDashboard = new InternetDashboard();
-            internetDashboard.Show();
+
         }
 
         private void buttonGoParfumeBusinessPage_MouseHover(object sender, EventArgs e)
@@ -55,7 +53,19 @@ namespace App
 
         private void buttonGoWebBusinessPage_MouseHover(object sender, EventArgs e)
         {
-            buttonGoWebBusinessPage.Cursor = Cursors.Hand;
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Toothpaste toothpaste = new Toothpaste();
+            toothpaste.Show();
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            button1.Cursor = Cursors.Hand;
         }
     }
 }

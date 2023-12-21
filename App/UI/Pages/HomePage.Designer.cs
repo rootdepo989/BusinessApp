@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             label2 = new System.Windows.Forms.Label();
-            pictureBox1 = new System.Windows.Forms.PictureBox();
+            buttonGoOtherWorkPages = new System.Windows.Forms.PictureBox();
             buttonGoParfumeBusinessPage = new System.Windows.Forms.Button();
-            buttonGoWebBusinessPage = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)buttonGoOtherWorkPages).BeginInit();
             SuspendLayout();
             // 
             // label2
@@ -47,16 +47,16 @@
             label2.TabIndex = 5;
             label2.Text = "RASİM bəy bütün işləriniz buradadır";
             // 
-            // pictureBox1
+            // buttonGoOtherWorkPages
             // 
-            pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            pictureBox1.Image = (System.Drawing.Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new System.Drawing.Point(0, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(800, 450);
-            pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 6;
-            pictureBox1.TabStop = false;
+            buttonGoOtherWorkPages.Dock = System.Windows.Forms.DockStyle.Fill;
+            buttonGoOtherWorkPages.Image = (System.Drawing.Image)resources.GetObject("buttonGoOtherWorkPages.Image");
+            buttonGoOtherWorkPages.Location = new System.Drawing.Point(0, 0);
+            buttonGoOtherWorkPages.Name = "buttonGoOtherWorkPages";
+            buttonGoOtherWorkPages.Size = new System.Drawing.Size(800, 450);
+            buttonGoOtherWorkPages.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            buttonGoOtherWorkPages.TabIndex = 6;
+            buttonGoOtherWorkPages.TabStop = false;
             // 
             // buttonGoParfumeBusinessPage
             // 
@@ -64,38 +64,38 @@
             buttonGoParfumeBusinessPage.BackgroundImage = (System.Drawing.Image)resources.GetObject("buttonGoParfumeBusinessPage.BackgroundImage");
             buttonGoParfumeBusinessPage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             buttonGoParfumeBusinessPage.ForeColor = System.Drawing.Color.Lime;
-            buttonGoParfumeBusinessPage.Location = new System.Drawing.Point(30, 123);
+            buttonGoParfumeBusinessPage.Location = new System.Drawing.Point(338, 214);
             buttonGoParfumeBusinessPage.Name = "buttonGoParfumeBusinessPage";
-            buttonGoParfumeBusinessPage.Size = new System.Drawing.Size(168, 46);
+            buttonGoParfumeBusinessPage.Size = new System.Drawing.Size(95, 75);
             buttonGoParfumeBusinessPage.TabIndex = 7;
-            buttonGoParfumeBusinessPage.Text = "ƏTİR TİCARƏTİM";
+            buttonGoParfumeBusinessPage.Text = "ƏTİRLƏR";
             buttonGoParfumeBusinessPage.UseVisualStyleBackColor = false;
             buttonGoParfumeBusinessPage.Click += buttonGoParfumeBusinessPage_Click;
             buttonGoParfumeBusinessPage.MouseHover += buttonGoParfumeBusinessPage_MouseHover;
             // 
-            // buttonGoWebBusinessPage
+            // button1
             // 
-            buttonGoWebBusinessPage.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            buttonGoWebBusinessPage.BackgroundImage = (System.Drawing.Image)resources.GetObject("buttonGoWebBusinessPage.BackgroundImage");
-            buttonGoWebBusinessPage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            buttonGoWebBusinessPage.ForeColor = System.Drawing.Color.Lime;
-            buttonGoWebBusinessPage.Location = new System.Drawing.Point(30, 224);
-            buttonGoWebBusinessPage.Name = "buttonGoWebBusinessPage";
-            buttonGoWebBusinessPage.Size = new System.Drawing.Size(168, 46);
-            buttonGoWebBusinessPage.TabIndex = 8;
-            buttonGoWebBusinessPage.Text = "İNTERNET İŞLƏRİM";
-            buttonGoWebBusinessPage.UseVisualStyleBackColor = false;
-            buttonGoWebBusinessPage.Click += buttonGoWebBusinessPage_Click;
-            buttonGoWebBusinessPage.MouseHover += buttonGoWebBusinessPage_MouseHover;
+            button1.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            button1.BackgroundImage = (System.Drawing.Image)resources.GetObject("button1.BackgroundImage");
+            button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            button1.ForeColor = System.Drawing.Color.Lime;
+            button1.Location = new System.Drawing.Point(428, 143);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(95, 74);
+            button1.TabIndex = 8;
+            button1.Text = "DİŞ PASTALARI";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            button1.MouseHover += button1_MouseHover;
             // 
             // HomePage
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 450);
-            Controls.Add(buttonGoWebBusinessPage);
+            Controls.Add(button1);
             Controls.Add(buttonGoParfumeBusinessPage);
-            Controls.Add(pictureBox1);
+            Controls.Add(buttonGoOtherWorkPages);
             Controls.Add(label2);
             Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Name = "HomePage";
@@ -103,7 +103,7 @@
             Text = "Ana Səhifə";
             FormClosing += HomePage_FormClosing;
             Load += HomePage_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)buttonGoOtherWorkPages).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -111,8 +111,8 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox buttonGoOtherWorkPages;
         private System.Windows.Forms.Button buttonGoParfumeBusinessPage;
-        private System.Windows.Forms.Button buttonGoWebBusinessPage;
+        private System.Windows.Forms.Button button1;
     }
 }
